@@ -24,8 +24,10 @@ class DetailPage extends StatelessWidget {
               child: Icon(
                 Icons.thumb_up_off_alt_outlined,
                 color: Colors.white,
+                size: 20,
               ),
             ),
+            splashColor: primaryColor,
           ),
         ],
       ),
