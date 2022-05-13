@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constant.dart';
-import 'pages/home.dart';
+import 'pages/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Bunny Ear',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: secondColor,
+        scaffoldBackgroundColor: thirdColor,
         primarySwatch: Colors.blue,
         fontFamily: "VarelaRound",
         appBarTheme: const AppBarTheme(
