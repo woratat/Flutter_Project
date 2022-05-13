@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           Center(
-            child: Text("Hello"),
+            child: Text("MAMA SUN"),
           ),
         ],
       ),
