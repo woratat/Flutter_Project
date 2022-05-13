@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bunny_ear">
    <application
-        android:label="bunny_ear"
+        android:label="BunnyEar"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'constant.dart';
+import 'pages/home.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,30 +14,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bunny Ear',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: secondColor,
         primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Bunny Ear'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+        fontFamily: "VarelaRound",
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
         ),
-        body: null);
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(color: Colors.black54),
+        ),
+      ),
+      home: const HomePage(),
+    );
   }
 }
