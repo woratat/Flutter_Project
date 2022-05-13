@@ -1,4 +1,7 @@
 import 'package:bunny_ear/constant.dart';
+import 'package:bunny_ear/pages/home/components/catagories.dart';
+import 'package:bunny_ear/pages/home/components/new_arrival.dart';
+import 'package:bunny_ear/pages/home/components/popular_product.dart';
 import 'package:bunny_ear/pages/home/components/search_form.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(width: 8),
             Text(
-              "RX22+55J, Sukhothai 5 Alley, Chiang Mai 50200",
+              "RX22+55J",
               style: Theme.of(context).textTheme.bodyText1,
             ),
           ],
@@ -77,9 +80,9 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.symmetric(vertical: 16),
               child: SearchForm(),
             ),
-            // const Categories(),
-            // const NewArrivalProducts(),
-            // const PopularProducts(),
+             const Categories(),
+             const NewArrivalProduct(),
+             const PoppularProducts(),
           ],
         ),
       ),

@@ -47,7 +47,7 @@ class CategoryCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 16 / 2,horizontal: 16 / 4),
         child: Column(
           children: [
-            Image(image: NetworkImage(icon)),
+            Image(image: NetworkImage(icon),height: 36,width: 36,),
             const SizedBox(height: 16 / 2),
             Text(title,style: Theme.of(context).textTheme.subtitle2)
           ]

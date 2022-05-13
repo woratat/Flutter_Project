@@ -38,7 +38,7 @@ class DetailPage extends StatelessWidget {
         child: Column(
           children: [
             Image(
-                image: NetworkImage(product.productImage),
+                image: NetworkImage(product.image),
                 height: MediaQuery.of(context).size.height * 0.4,
                 fit: BoxFit.cover,
             ),
@@ -57,7 +57,7 @@ class DetailPage extends StatelessWidget {
                       children: [
                         Flexible(
                           child: Text(
-                            product.productName,
+                            product.title,
                             style: Theme.of(context).textTheme.headline6!,
                           ),
                         )

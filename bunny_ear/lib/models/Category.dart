@@ -10,15 +10,15 @@ List<Category> categories_ear = [
     title: "Headphones"
   ),
   Category(
-    icon: "b", 
+    icon: "https://media.wired.com/photos/618048b16fe08d62522d94c2/master/w_2400,h_1800,c_limit/Gear-Apple-Airpods-3-2021-Review.jpg", 
     title: "Earbuds"
   ),
   Category(
-    icon: "c", 
+    icon: "https://media-cdn.bnn.in.th/52335/7340055309394-1-square_medium.jpg", 
     title: "In Ear"
   ),
   Category(
-    icon: "d", 
+    icon: "https://image.makewebeasy.net/makeweb/0/S46e8BNPc/RP-HS46%20A-B/RP-HS46-W.jpg", 
     title: "Ear Clips"
   )
 ];

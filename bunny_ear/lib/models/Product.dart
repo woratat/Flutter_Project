@@ -1,20 +1,17 @@
+import 'package:flutter/material.dart';
+
 class Product {
-  final String productName, description, productImage;
-  final double productPrice;
+  final String title;
+  final String image;
+  final int price;
 
-  const Product({
-    required this.productName,
-    required this.description,
-    required this.productImage,
-    required this.productPrice
-  });
+  Product({required this.title, required this.price, required this.image});
 
-  factory Product.fromJson(Map<String, dynamic> data) {
+  factory Product.fromJson(Map<String, dynamic> json) {
     return new Product(
-      productName: data['productName'],
-      description: data['description'],
-      productImage: data['productImage'],
-      productPrice: data['productPrice'],
+      title: json['title'],
+      price: json['price'],
+      image: json['image'],
     );
   }
 }
