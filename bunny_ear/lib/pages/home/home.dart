@@ -1,4 +1,5 @@
 import 'package:bunny_ear/constant.dart';
+import 'package:bunny_ear/pages/home/components/audio_player.dart';
 import 'package:bunny_ear/pages/home/components/catagories.dart';
 import 'package:bunny_ear/pages/home/components/new_arrival.dart';
 import 'package:bunny_ear/pages/home/components/popular_product.dart';
@@ -109,9 +110,15 @@ class _HomePageState extends State<HomePage> {
                   title: Text('Profile'),
                 ),
                 ListTile(
-                  onTap: () {},
-                  leading: Icon(Icons.favorite),
-                  title: Text('Favourites'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AudioPlayer()),
+                    );
+                  },
+                  leading: Icon(Icons.album),
+                  title: Text('Sound'),
                 ),
                 ListTile(
                   onTap: () {},

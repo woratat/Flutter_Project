@@ -1,3 +1,4 @@
+import 'package:bunny_ear/pages/home/components/audio_player.dart';
 import 'package:flutter/material.dart';
 
 import 'constant.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.black54),
         ),
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
