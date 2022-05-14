@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:bunny_ear/models/Product.dart';
+import 'package:bunny_ear/pages/detail/detail.dart';
 import 'package:bunny_ear/pages/home/components/product_card.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
+import 'package:bunny_ear/pages/home/components/see_all.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
@@ -111,7 +113,15 @@ class _PopularProductsState extends State<PopularProducts> {
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         child: SectionTitle(
                           title: "Popular",
-                          pressSeeAll: () {},
+                          pressSeeAll: () {
+                             Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                  SeeAllPage(title: "Popular"),
+                              )
+                            );
+                          },
                         ),
                       ),
                       SingleChildScrollView(
@@ -125,9 +135,17 @@ class _PopularProductsState extends State<PopularProducts> {
                               padding: const EdgeInsets.only(right: 16),
                               child: ProductCard(
                                 title: items[index].title,
-                                image: items[index].image,
+                                image: items[index].images[0],
                                 price: items[index].price,
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          DetailPage(product: items[index]),
+                                    )
+                                  );
+                                },
                               ),
                             ),
                           ),

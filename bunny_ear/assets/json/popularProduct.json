@@ -1,22 +1,54 @@
 [
     {
         "title": "Apple AirPods (Gen 3)",
+        "subtitle":"Apple",
+        "description":"AirPods นั้นมีน้ำหนักเบาและมาในขนาดกระชับพอดีในรูปทรงโค้งมน ทั้งยังทำมุมได้ลงตัวพอดีกับหู ทำให้ทั้งใส่สบายและเสียงเข้าสู่หูของคุณได้ดียิ่งขึ้น นอกจากนี้ก้านก็มีขนาดสั้นกว่า AirPods (รุ่นที่ 2) ถึง 33% และมีเซ็นเซอร์แรงกดเพื่อให้คุณควบคุมเสียงดนตรีและการโทรได้อย่างง่ายดาย",
         "price": 6790,
-        "image": "https://www.munkonggadget.com/Images/product/option6757_30720_800x600.jpg"
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6757_30720_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6757_30720_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6757_30721_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6757_30722_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6757_30723_800x600.jpg"
+
+        ]
     },
     {
         "title": "Sony WH-1000XM4",
+        "subtitle":"Sony",
+        "description":"หูฟังไร้สาย Sony WH-1000XM4 เป็นหูฟัง full size ที่ใช้การออกแบบที่คล้ายกันกับรุ่น WH-1000XM3 เลยครับ โดยตัวหูฟังนั้นมีขนาด ear cup ที่พอเหมาะ ซึ่งจะครอบใบหูได้อย่างพอดี ไม่เล็กหรือใหญ่จนเกินไป ตัวบอดี้นั้นจะใช้พลาสติกเป็นหลักครับ เป็นสีแบบกึ่งเงาซึ่งดูเรียบหรูมากๆ โดยจะมีให้เลือก 2 สีคือสีดำ และสีเงิน โดยในส่วนของฟองน้ำนั้นก็จะเป็นสีเดียวกันกับตัวหูฟังเพื่อความสวยงามครับ ออกแบบให้เมื่อสวมใส่จะกระจายแรงกดได้ดี ทำให้ไม่รู้สึกเจ็บใบหูเวลาใช้งาน ภายในกล่องมาพร้อมกับเคสสำหรับพกพา และสายไฟต่างๆ",
         "price": 10440,
-        "image": "https://www.munkonggadget.com/Images/product/option5408_23415_800x600.jpg"
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option5408_23415_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5408_23304_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5408_23305_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5408_23306_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5408_23310_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5408_23312_800x600.jpg"
+        ]
     },
     {
         "title": "Sony WF-1000XM4",
+        "subtitle":"Sony",
+        "description":"Sony WF-1000XM4 นั้นเป็นหูฟัง in ear ชนิด true wireless ที่จะแยกออกจากกันอย่างอิสระ ไม่มีสายเชื่อมต่อใดๆครับ ตัวบอดี้ใช้วัสดุทำจากพลาสติกลักษณะด้าน ทำความสะอาดง่าย ออกแบบตามหลักสรีรศาสตร์ที่จะสวมใส่ได้อย่างพอดี ไม่รู้สึกเจ็บ และกระชับมากๆครับ ที่ตัวหูฟังนั้นจะไม่มีปุ่มกดใดๆ โดยจะควบคุมผ่านระบบสัมผัสที่หูฟังทั้งสองข้าง มาพร้อมกับเคสสำหรับพกพาและชาร์จแบตเตอรี่ในตัว ซึ่งตัวเคสจะรองรับการชาร์จแบตเตอรี่แบบไร้สาย",
         "price": 8065,
-        "image": "https://www.munkonggadget.com/Images/product/option6322_28259_800x600.jpg"
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6322_28259_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6322_28261_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6322_28263_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6322_28264_800x600.jpg"
+        ]
     },
     {
         "title": "Shokz Openrun Pro",
+        "subtitle":"test",
+        "description":"Shokz OpenRun Pro เป็นหูฟังระบบ Bone Conduction ที่จะทำงานด้วยการส่งสั่นสะเทือนผ่านทางกระดูกไปยังช่องหูของเรา ทำให้สามารถได้ยินเสียงเพลง และได้ยินเสียงรอบๆตัวไปพร้อมๆกัน โดยในรุ่นนี้จะมีขนาดที่เล็กลง 20% เมื่อเทียบกับรุ่นก่อน ทำให้่กระจายน้ำหนักได้ดียิ่งขึ้น ตัวก้านใช้วัสดุไทเทเนียมเพื่อความแข็งแรงทนทาน ปุ่มควบคุมการทำงานแบบ 1 ปุ่มจะอยู่ที่ด้านซ้านของหูฟัง ส่วนด้านขวาล่างจะมีปุ่มสำหรับปรับระดับเสียง พร้อมช่องเสียบหัวชาร์จซึ่งเป็นแบบพิเศษเฉพาะของทางแบรนด์เท่านั้น",
         "price": 6690,
-        "image": "https://www.munkonggadget.com/Images/product/option6889_31404_800x600.jpg"
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6889_31404_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6889_31401_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6889_31402_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6889_31403_800x600.jpg"
+        ]
     }
 ]

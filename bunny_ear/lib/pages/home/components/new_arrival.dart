@@ -1,6 +1,8 @@
 import 'package:bunny_ear/models/Product.dart';
+import 'package:bunny_ear/pages/detail/detail.dart';
 import 'package:bunny_ear/pages/home/components/product_card.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
+import 'package:bunny_ear/pages/home/components/see_all.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' as rootBundle;
@@ -33,7 +35,15 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         child: SectionTitle(
                           title: "New Arrival",
-                          pressSeeAll: () {},
+                          pressSeeAll: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                  SeeAllPage(title: "New Arrival"),
+                              )
+                            );
+                          },
                         ),
                       ),
                       SingleChildScrollView(
@@ -47,9 +57,17 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
                               padding: const EdgeInsets.only(right: 16),
                               child: ProductCard(
                                 title: items[index].title,
-                                image: items[index].image,
+                                image: items[index].images[0],
                                 price: items[index].price,
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          DetailPage(product: items[index]),
+                                    )
+                                  );
+                                },
                               ),
                             ),
                           ),
