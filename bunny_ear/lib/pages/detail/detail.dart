@@ -1,5 +1,7 @@
 import 'package:bunny_ear/models/Product.dart';
+import 'package:bunny_ear/pages/detail/components/add_cart.dart';
 import 'package:bunny_ear/pages/detail/components/detail_app_bar.dart';
+import 'package:bunny_ear/pages/detail/components/list_type_ear.dart';
 import 'package:bunny_ear/pages/detail/components/product_detail_info.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +19,8 @@ class DetailPage extends StatelessWidget {
           children: <Widget>[
             DetailAppBar(product: product),
             ProductDetailInfo(product: product),
+            ListTypeEar(),
+            AddCart(product: product),
           ],
         ),
       ),
