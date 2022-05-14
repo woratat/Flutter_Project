@@ -106,8 +106,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.2"
-<<<<<<< HEAD
-=======
   file_picker:
     dependency: "direct main"
     description:
@@ -115,7 +113,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.5.1"
->>>>>>> dev-tum
   flutter:
     dependency: "direct main"
     description: flutter
@@ -159,7 +156,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
   http:
     dependency: transitive
     description:
@@ -174,8 +170,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
-=======
->>>>>>> dev-tum
   image:
     dependency: transitive
     description:
@@ -226,11 +220,7 @@ packages:
     source: hosted
     version: "1.8.0"
   path_provider:
-<<<<<<< HEAD
-    dependency: transitive
-=======
     dependency: "direct main"
->>>>>>> dev-tum
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -306,8 +296,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
-<<<<<<< HEAD
-=======
   readmore:
     dependency: "direct main"
     description:
@@ -322,7 +310,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.3"
->>>>>>> dev-tum
   sky_engine:
     dependency: transitive
     description: flutter
