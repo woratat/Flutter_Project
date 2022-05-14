@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Bunny Ear',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: thirdColor,
+        scaffoldBackgroundColor: bgColor,
         primarySwatch: Colors.blue,
         fontFamily: "VarelaRound",
         appBarTheme: const AppBarTheme(

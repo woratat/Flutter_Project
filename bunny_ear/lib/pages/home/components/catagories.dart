@@ -1,3 +1,4 @@
+import 'package:bunny_ear/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:bunny_ear/models/Category.dart';
 
@@ -39,6 +40,9 @@ class CategoryCard extends StatelessWidget {
     return OutlinedButton(
       onPressed: press,
       style: OutlinedButton.styleFrom(
+        primary: primaryColor,
+        side: BorderSide(width: 1.0, color: Colors.transparent),
+        backgroundColor: Colors.white,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(16))
         )

@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(width: 8),
             Text(
-              "RX22+55J",
+              "CAMT CMU",
               style: Theme.of(context).textTheme.bodyText1,
             ),
           ],
