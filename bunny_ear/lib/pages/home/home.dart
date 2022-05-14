@@ -3,88 +3,143 @@ import 'package:bunny_ear/pages/home/components/catagories.dart';
 import 'package:bunny_ear/pages/home/components/new_arrival.dart';
 import 'package:bunny_ear/pages/home/components/popular_product.dart';
 import 'package:bunny_ear/pages/home/components/search_form.dart';
-import 'package:bunny_ear/pages/home/components/section_title.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
-  State<HomePage> createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  final _advancedDrawerController = AdvancedDrawerController();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: CircleAvatar(
-            backgroundColor: Colors.white,
-            child: Icon(
-              Icons.menu,
-              color: primaryColor,
+    return AdvancedDrawer(
+      backdropColor: Colors.blueGrey,
+      controller: _advancedDrawerController,
+      animationCurve: Curves.easeInOut,
+      animationDuration: const Duration(milliseconds: 300),
+      animateChildDecoration: true,
+      rtlOpening: false,
+      disabledGestures: false,
+      childDecoration: const BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
+      ),
+      child: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            color: primaryColor,
+            onPressed: _handleMenuButtonPressed,
+            icon: ValueListenableBuilder<AdvancedDrawerValue>(
+              valueListenable: _advancedDrawerController,
+              builder: (_, value, __) {
+                return AnimatedSwitcher(
+                  duration: Duration(milliseconds: 250),
+                  child: Icon(
+                    value.visible ? Icons.clear : Icons.menu,
+                    key: ValueKey<bool>(value.visible),
+                  ),
+                );
+              },
             ),
           ),
-          splashColor: Colors.transparent,
-          highlightColor: secondColor,
-          hoverColor: Colors.transparent,
         ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.location_on,
-              color: primaryColor,
-            ),
-            const SizedBox(width: 8),
-            Text(
-              "CAMT CMU",
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          ],
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: CircleAvatar(
-                backgroundColor: Colors.transparent,
-                child: Icon(Icons.notifications_active_outlined,
-                    color: primaryColor)),
-            splashColor: Colors.transparent,
-            highlightColor: secondColor,
-            hoverColor: Colors.transparent,
-          )
-        ],
+        body: ListView(
+            physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics()),
+            padding: const EdgeInsets.all(16),
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Explore",
+                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                        fontWeight: FontWeight.w500, color: Colors.black),
+                  ),
+                  const Text(
+                    "Astonishing sound. Wherever life takes you.",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: SearchForm(),
+                  ),
+                  const Categories(),
+                  const NewArrivalProduct(),
+                  const PopularProducts(),
+                ],
+              ),
+            ]),
       ),
-      body: ListView(
-          physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
-          padding: const EdgeInsets.all(16),
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      drawer: SafeArea(
+        child: Container(
+          child: ListTileTheme(
+            textColor: Colors.white,
+            iconColor: Colors.white,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
               children: [
-                Text(
-                  "Explore",
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
-                      fontWeight: FontWeight.w500, color: Colors.black),
+                Container(
+                  width: 128.0,
+                  height: 128.0,
+                  margin: const EdgeInsets.only(
+                    top: 24.0,
+                    bottom: 64.0,
+                  ),
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/icon/icon.png',
+                  ),
                 ),
-                const Text(
-                  "Astonishing sound. Wherever life takes you.",
-                  style: TextStyle(fontSize: 18),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.home),
+                  title: Text('Home'),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                  child: SearchForm(),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.account_circle_rounded),
+                  title: Text('Profile'),
                 ),
-                const Categories(),
-                const NewArrivalProduct(),
-                const PopularProducts(),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.favorite),
+                  title: Text('Favourites'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.settings),
+                  title: Text('Settings'),
+                ),
+                Spacer(),
+                DefaultTextStyle(
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white54,
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 16.0,
+                    ),
+                    child: Text('Terms of Service | Privacy Policy'),
+                  ),
+                ),
               ],
             ),
-          ]),
+          ),
+        ),
+      ),
     );
+  }
+
+  void _handleMenuButtonPressed() {
+    _advancedDrawerController.showDrawer();
   }
 }

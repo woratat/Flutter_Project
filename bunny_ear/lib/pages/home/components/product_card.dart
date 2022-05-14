@@ -53,7 +53,7 @@ class ProductCard extends StatelessWidget {
                   width: 3,
                 ),
                 Text(
-                  "THB" + price.toString(),
+                  "THB " + price.toString(),
                   style: Theme.of(context).textTheme.subtitle2,
                 )
               ],
