@@ -47,6 +47,7 @@ class _AudioPlayerState extends State<AudioPlayer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("Sound Sampling"),
         leading: GestureDetector(
           child: Icon( Icons.arrow_back, color: Colors.white,  ),
           onTap: () {
