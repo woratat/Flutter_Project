@@ -1,3 +1,4 @@
+import 'package:bunny_ear/pages/home/components/audio_player.dart';
 import 'package:flutter/material.dart';
 
 import 'constant.dart';
