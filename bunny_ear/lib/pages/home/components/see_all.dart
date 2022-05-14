@@ -1,3 +1,6 @@
+
+import 'dart:math';
+
 import 'package:bunny_ear/constant.dart';
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
@@ -67,15 +70,35 @@ class _SeeAllPageState extends State<SeeAllPage> {
                         );
                       },
                       child: DecoratedBox(
-                        child: Text(items[index].title),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              spreadRadius: 3,
+                              blurRadius: 5
+                            )
+                          ],
                           image: DecorationImage(
                             image: NetworkImage(
                             items[index].images[0]
                             ),
                             fit: BoxFit.cover
                           )
+                        ),
+                        child: Center(
+                          child:Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(8,135,8,5),
+                                child: Container(
+                                  color: Color(0xFFEBEBEBE),
+                                  height: 1,
+                                ),
+                              ),
+                              Text(items[index].title)
+                            ]
+                          ) ,
                         )
                       ),
                     );
@@ -133,15 +156,36 @@ class _SeeAllPageState extends State<SeeAllPage> {
                         );
                       },
                       child: DecoratedBox(
-                        child: Text(items[index].title),
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              spreadRadius: 3,
+                              blurRadius: 5
+                            )
+                          ],
                           image: DecorationImage(
                             image: NetworkImage(
                             items[index].images[0]
-                            )
+                            ),
+                            fit: BoxFit.cover
                           )
+                        ),
+                        child: Center(
+                          child:Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(8,135,8,5),
+                                child: Container(
+                                  color: Color(0xFFEBEBEBE),
+                                  height: 1,
+                                ),
+                              ),
+                              Text(items[index].title),
+                            ]
+                          ) ,
                         )
-                        
                       ),
                     );
                   }

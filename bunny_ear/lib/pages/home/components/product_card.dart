@@ -1,5 +1,6 @@
 import 'package:bunny_ear/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -10,12 +11,16 @@ class ProductCard extends StatelessWidget {
     required this.press,
   }) : super(key: key);
 
+  
   final String image, title;
   final int price;
   final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
+
+    final format = new NumberFormat('#,##0.00','en_US');
+
     return GestureDetector(
       onTap: press,
       child: Container(
@@ -42,19 +47,21 @@ class ProductCard extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Expanded(
-                    child: Text(
+                Text(
                   title,
-                  style: const TextStyle(color: Colors.black54),
-                )),
+                  style: const TextStyle(color: Colors.black54,fontWeight: FontWeight.bold),
+                  overflow: TextOverflow.ellipsis,
+                ),
                 SizedBox(
-                  width: 3,
+                  height: 8,
                 ),
                 Text(
-                  "THB " + price.toString(),
-                  style: Theme.of(context).textTheme.subtitle2,
+                  "THB ${format.format(price)}",
+                  style: Theme.of(context).textTheme.labelSmall,
+                  
                 )
               ],
             ),
