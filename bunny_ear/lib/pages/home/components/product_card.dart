@@ -36,6 +36,7 @@ class ProductCard extends StatelessWidget {
               child: Image.network(
                 image,
                 height: 132,
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(

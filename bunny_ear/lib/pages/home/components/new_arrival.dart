@@ -1,4 +1,3 @@
-
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/home/components/product_card.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
@@ -17,7 +16,7 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 300,
       child: FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {
@@ -29,7 +28,6 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
                 itemCount: items == null ? 0 : 1,
                 itemBuilder: (context, index) {
                   return Column(
-                    
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16),

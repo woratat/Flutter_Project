@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: () {},
             icon: CircleAvatar(
-              backgroundColor: Colors.transparent,
+                backgroundColor: Colors.transparent,
                 child: Icon(Icons.notifications_active_outlined,
                     color: primaryColor)),
             splashColor: Colors.transparent,
@@ -58,34 +58,33 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(
-            parent: AlwaysScrollableScrollPhysics()),
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+          physics: const BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics()),
+          padding: const EdgeInsets.all(16),
           children: [
-            Text(
-              "Explore",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline4!
-                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Explore",
+                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                      fontWeight: FontWeight.w500, color: Colors.black),
+                ),
+                const Text(
+                  "Astonishing sound. Wherever life takes you.",
+                  style: TextStyle(fontSize: 18),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                  child: SearchForm(),
+                ),
+                const Categories(),
+                const NewArrivalProduct(),
+                const PopularProducts(),
+              ],
             ),
-            const Text(
-              "Astonishing sound. Wherever life takes you.",
-              style: TextStyle(fontSize: 18),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 16),
-              child: SearchForm(),
-            ),
-             const Categories(),
-             const NewArrivalProduct(),
-             const PoppularProducts(),
-          ],
-        ),
-      ),
+          ]),
     );
   }
 }

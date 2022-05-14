@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'constant.dart';
-import 'pages/home/components/new_arrival.dart';
 import 'pages/home/home.dart';
 
 void main() {
