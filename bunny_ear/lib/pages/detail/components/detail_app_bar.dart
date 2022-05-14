@@ -12,8 +12,9 @@ import 'package:screenshot/screenshot.dart';
 
 class DetailAppBar extends StatefulWidget {
   final Product product;
+  final ScreenshotController screenshotController;
 
-  const DetailAppBar({ Key? key, required this.product }) : super(key: key);
+  const DetailAppBar({ Key? key, required this.product, required this.screenshotController }) : super(key: key);
 
   @override
   State<DetailAppBar> createState() => _DetailAppBarState();
@@ -21,7 +22,6 @@ class DetailAppBar extends StatefulWidget {
 
 class _DetailAppBarState extends State<DetailAppBar> {
   final CarouselController _controller = CarouselController();
-  final ScreenshotController _screenshotController = ScreenshotController();
   int _currentPage = 0;
 
   Future<void> shareScreen() async {
@@ -31,13 +31,13 @@ class _DetailAppBarState extends State<DetailAppBar> {
     } else {
       directory = await getApplicationDocumentsDirectory();
     }
-    final String localPath = '${directory!.path}/${DateTime.now().toIso8601String()}.png';
-    print(localPath);
-    await _screenshotController.captureAndSave(localPath);
+    final String localPath = '${directory!.path}/${DateTime.now().toIso8601String()}';
+    final String fileName = localPath.split('.')[3] + '.png';
+    await widget.screenshotController.captureAndSave(localPath, fileName: fileName);
     await Future.delayed(Duration(seconds: 1));
     await FlutterShare.shareFile(
       title: 'shear image',
-      filePath: localPath,
+      filePath: localPath + '/$fileName',
       fileType: 'image/png'
     );
   }
@@ -46,7 +46,7 @@ class _DetailAppBarState extends State<DetailAppBar> {
   Widget build(BuildContext context) {
     return Container(
       child: Screenshot(
-        controller: _screenshotController,
+        controller: widget.screenshotController,
         child: Stack(
           children: <Widget>[
             Container(
