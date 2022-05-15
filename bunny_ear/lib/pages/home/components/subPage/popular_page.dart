@@ -18,7 +18,7 @@ Scaffold popular_page(BuildContext context) {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(Icons.arrow_back_ios_rounded),
+          icon: Icon(Icons.arrow_back),
           alignment: Alignment.center,
           splashColor: Colors.transparent,
         ),

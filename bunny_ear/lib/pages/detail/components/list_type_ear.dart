@@ -34,10 +34,10 @@ class _ListTypeEarState extends State<ListTypeEar> {
               vertical: 10,
             ),
             decoration: BoxDecoration(
-              color: _currentSelected == index ? secondColor.withOpacity(0.5) : Colors.white,
+              color: _currentSelected == index ? secondColor.withOpacity(0.4) : Colors.white,
               borderRadius: BorderRadius.circular(15),
               border: Border.all(
-                color: Colors.grey.withOpacity(0.1),
+                color: thirdColor,
                 width: 2
               ),
             ),

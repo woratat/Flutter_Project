@@ -37,7 +37,7 @@ class _AddCartState extends State<AddCart> {
                 style: TextStyle(
                   height: 1.5,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 16,
                 ),
               ),
             ],
@@ -53,7 +53,7 @@ class _AddCartState extends State<AddCart> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   elevation: 0,
-                  primary: primaryColor,
+                  primary: primaryColor.withOpacity(0.8),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +61,7 @@ class _AddCartState extends State<AddCart> {
                     Text(
                       'Add to cart',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                       ),
                     ),
                     SizedBox(width: 10),

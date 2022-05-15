@@ -6,38 +6,36 @@ import 'package:readmore/readmore.dart';
 class ProductDetailInfo extends StatelessWidget {
   final Product product;
 
-  const ProductDetailInfo({ Key? key, required this.product }) : super(key: key);
+  const ProductDetailInfo({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 25,
-        vertical: 10
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Wrap(
+            spacing: 8.0, // gap between adjacent chips
+            runSpacing: 4.0, // gap between lines
+            direction: Axis.horizontal,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 '${product.title}',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,),
               ),
               Container(
                 padding: EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.9),
-                  shape: BoxShape.circle
-                ),
+                    color: Colors.white.withOpacity(0.9),
+                    shape: BoxShape.circle),
                 child: Icon(
-                  Icons.favorite,
-                  color: Colors.red,
+                  Icons.favorite_outline,
+                  color: primaryColor,
                 ),
               )
             ],

@@ -128,7 +128,7 @@ class _DetailAppBarState extends State<DetailAppBar> {
                           right: 1
                         ),
                         child: Icon(
-                          Icons.arrow_back_ios_new_rounded,
+                          Icons.arrow_back,
                           color: Colors.grey,
                           size: 20,
                         ),
