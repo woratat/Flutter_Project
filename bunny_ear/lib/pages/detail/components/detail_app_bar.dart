@@ -34,7 +34,6 @@ class _DetailAppBarState extends State<DetailAppBar> {
     final String localPath = '${directory!.path}/${DateTime.now().toIso8601String()}';
     final String fileName = localPath.split('.')[3] + '.png';
     await widget.screenshotController.captureAndSave(localPath, fileName: fileName);
-    await Future.delayed(Duration(seconds: 1));
     await FlutterShare.shareFile(
       title: 'shear image',
       filePath: localPath + '/$fileName',
