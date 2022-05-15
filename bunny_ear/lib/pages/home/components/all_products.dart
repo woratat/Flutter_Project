@@ -1,20 +1,21 @@
+import 'dart:convert';
+
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
 import 'package:bunny_ear/pages/home/components/product_card.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
 import 'package:bunny_ear/pages/home/components/see_all.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
 import 'package:flutter/services.dart' as rootBundle;
 
-class NewArrivalProduct extends StatefulWidget {
-  const NewArrivalProduct({Key? key}) : super(key: key);
+class AllProducts extends StatefulWidget {
+  const AllProducts({ Key? key }) : super(key: key);
 
   @override
-  State<NewArrivalProduct> createState() => _NewArrivalProductState();
+  State<AllProducts> createState() => _AllProductsState();
 }
 
-class _NewArrivalProductState extends State<NewArrivalProduct> {
+class _AllProductsState extends State<AllProducts> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,13 +35,13 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         child: SectionTitle(
-                          title: "New Arrival",
+                          title: "All Products",
                           pressSeeAll: () {
-                            Navigator.push(
+                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                  SeeAllPage(title: "New Arrival"),
+                                  SeeAllPage(title: "All Products"),
                               )
                             );
                           },
@@ -84,12 +85,13 @@ class _NewArrivalProductState extends State<NewArrivalProduct> {
         },
       ),
     );
+
   }
 }
 
 Future<List<Product>> ReadJsonData() async {
   final jsondata =
-      await rootBundle.rootBundle.loadString('assets/json/newArrival.json');
+      await rootBundle.rootBundle.loadString('assets/json/products.json');
   final list = json.decode(jsondata) as List<dynamic>;
   return list.map((e) => Product.fromJson(e)).toList();
 }

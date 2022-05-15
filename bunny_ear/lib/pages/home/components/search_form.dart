@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bunny_ear/constant.dart';
+import 'package:flutter_bounceable/flutter_bounceable.dart';
 
 class SearchForm extends StatelessWidget {
   const SearchForm({
@@ -23,11 +24,16 @@ class SearchForm extends StatelessWidget {
           errorBorder: outlineInputBorder,
           prefixIcon: Padding(
             padding: const EdgeInsets.all(14),
-            child: Icon(Icons.search, color: primaryColor,),
+            child: Bounceable(
+              scaleFactor: 1.0,
+                onTap: () {},
+                child: Icon(
+                  Icons.search,
+                  color: primaryColor,
+                )),
           ),
           suffixIcon: Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 16, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: SizedBox(
               width: 48,
               height: 48,
@@ -40,7 +46,10 @@ class SearchForm extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {},
-                child: Icon(Icons.filter_alt_sharp, size: 16,),
+                child: Icon(
+                  Icons.filter_alt_sharp,
+                  size: 16,
+                ),
               ),
             ),
           ),

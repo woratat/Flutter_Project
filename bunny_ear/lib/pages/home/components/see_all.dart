@@ -1,6 +1,8 @@
 import 'package:bunny_ear/constant.dart';
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
+import 'package:bunny_ear/pages/home/components/subPage/all_products.dart';
+import 'package:bunny_ear/pages/home/components/subPage/earClips_page.dart';
 import 'package:bunny_ear/pages/home/components/subPage/headphones_page.dart';
 import 'package:bunny_ear/pages/home/components/subPage/true_wireless_page.dart';
 import 'package:bunny_ear/pages/home/home.dart';
@@ -32,6 +34,10 @@ class _SeeAllPageState extends State<SeeAllPage> {
       return headPhonesPage(context);
     } else if (widget.title == "True Wireless") {
       return trueWirelessPage(context);
+    } else if (widget.title == "All Products") {
+      return AllProductsPage(context);
+    } else if (widget.title == "Ear Clips") {
+      return earClipsPage(context);
     } else {
       return Text("data");
     }

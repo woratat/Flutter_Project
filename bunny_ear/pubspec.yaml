@@ -39,6 +39,7 @@ dependencies:
   file_picker: ^4.5.1
   screenshot: ^1.2.3
   path_provider: ^2.0.10
+  flutter_bounceable: ^1.0.2
 
 
   # The following adds the Cupertino Icons font to your application.

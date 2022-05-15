@@ -1,4 +1,5 @@
 import 'package:bunny_ear/constant.dart';
+import 'package:bunny_ear/pages/home/components/all_products.dart';
 import 'package:bunny_ear/pages/home/components/audio_player.dart';
 import 'package:bunny_ear/pages/home/components/catagories.dart';
 import 'package:bunny_ear/pages/home/components/new_arrival.dart';
@@ -72,6 +73,7 @@ class _HomePageState extends State<HomePage> {
                   const Categories(),
                   const NewArrivalProduct(),
                   const PopularProducts(),
+                  const AllProducts(),
                 ],
               ),
             ]),
