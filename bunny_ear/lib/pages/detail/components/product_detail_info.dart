@@ -28,16 +28,6 @@ class ProductDetailInfo extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 24,),
               ),
-              Container(
-                padding: EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.9),
-                    shape: BoxShape.circle),
-                child: Icon(
-                  Icons.favorite_outline,
-                  color: primaryColor,
-                ),
-              )
             ],
           ),
           Padding(

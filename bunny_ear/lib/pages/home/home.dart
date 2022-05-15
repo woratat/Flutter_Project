@@ -1,4 +1,6 @@
+import 'package:badges/badges.dart';
 import 'package:bunny_ear/constant.dart';
+import 'package:bunny_ear/pages/cart/cart.dart';
 import 'package:bunny_ear/pages/home/components/all_products.dart';
 import 'package:bunny_ear/pages/home/components/audio_player.dart';
 import 'package:bunny_ear/pages/home/components/catagories.dart';
@@ -48,6 +50,38 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 13,
+              ),
+              child: Badge(
+                position: BadgePosition(
+                  top: 1,
+                  start: 11,
+                ),
+                badgeContent: Text(
+                  '2',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CartPage(),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    Icons.shopping_bag_rounded,
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
         body: ListView(
             physics: const BouncingScrollPhysics(

@@ -12,3 +12,5 @@ class CartProduct {
     required this.type,
   });
 }
+
+List<CartProduct> cartItem = [];
