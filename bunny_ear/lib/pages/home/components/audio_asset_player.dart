@@ -15,7 +15,7 @@ class AudioAssetPlayer {
   AudioAssetPlayer(this.filename);
 
   Future<void> int() async {
-    _audioPlayer = await AudioCache().play(filename);
+    _audioPlayer = await AudioCache(prefix: 'assets/mp3/').play(filename);
     await Future.delayed(const Duration(milliseconds: 2000));
     _audioDurationMS = await _audioPlayer.getDuration();
 
