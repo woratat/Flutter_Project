@@ -1,0 +1,68 @@
+[
+    {
+        "title": "B&O Beoplay EX",
+        "subtitle":"B&O",
+        "description":"หูฟังไร้สายจากทาง B&O ในรุ่น Beoplay EX เป็นหูฟังไร้สายที่ออกแบบให้มีตัวก้านหูฟัง โดยดีไซน์แบบนี้ทำให้สามารถใส่ไดร์เวอร์ขนาด 9.2 มม. ลงไปได้เลยทีเดียวครับ",
+        "price": 16500,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option7246_33380_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7246_33382_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7246_33386_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Sony LinkBuds WF-L900",
+        "subtitle":"Sony",
+        "description":"หูฟังไร้สายจาก Sony ในรุ่น WF-L900 หรืออีกชื่อหนึ่งก็คือ LinkBuds เป็นหูฟังไร้สายประเภท earbuds ที่ออกแบบมาได้อย่างมีความโดดเด่น โดยที่ไดร์เวอร์จะมีรูตรงกลางเพื่อให้เสียงรอบตัวสามารถเข้ามาได้โดยไม่โดนกีดขวางครับ",
+        "price": 6990,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option7133_32831_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7133_32730_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7133_32731_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Sennheiser CX Plus True Wireless",
+        "subtitle":"Sennheiser",
+        "description":"หูฟังไร้สายจากทาง Sennheiser ในรุ่น CX Plus True Wireless เป็นหูฟังไร้สายที่ออกแบบมาสำหรับการใช้งานทั่วไปครับ โดยมาพร้อมกับชุดไดร์เวอร์ TrueResponse พร้อม EQ และระบบ Bass boost ในตัว",
+        "price": 5299,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6686_30338_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6686_30339_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6686_30342_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Master & Dynamic MW08",
+        "subtitle":"Master & Dynamic",
+        "description":"หูฟังไร้สายจากทาง Master & Dynamic ในรุ่น MW08 นั้นเป็นหูฟังที่มีหน้าตาคล้ายกับรุ่นก่อนหน้า แต่จะเปลี่ยนวัสดุที่ตัวบอดี้ใหม่เป็นเซรามิค โดยมาพร้อมกับเคสสแตนเลสดีไซน์ใหม่อีกด้วยครับ",
+        "price": 9800,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6190_27451_800x600.png",
+            "https://www.munkonggadget.com/Images/product/option6190_27448_800x600.png",
+            "https://www.munkonggadget.com/Images/product/option6190_27449_800x600.png"
+        ]
+    },
+    {
+        "title": "Marshall Motif ANC",
+        "subtitle":"Marshall",
+        "description":"หูฟังไร้สายจาก Marshall ในรุ่น Motif ANC. เป็นหูฟังไร้สาย true wireless ที่ยังคงใช้การออกแบบโดยยึดดีไซน์ของแอมป์กีตาร์เป็นหลักครับ โดยในรุ่นนี้จะมาพร้อมกับระบบตัดเสียงรบกวน ANC. และแบตเตอรี่ที่สามารถใช้งานได้นานสูงสุดถึง 20 ชั่วโมงเลยทีเดียว",
+        "price": 6990,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option7122_32678_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7122_32675_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7122_32680_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Sennheiser Momentum True Wireless 2",
+        "subtitle":"Sennheiser",
+        "description":"หูฟังจากทาง Sennheiser ในรุ่น Momentum True Wireless 2 นั้นเป็นหูฟังที่ต่อยอดมาจากรุ่นแรกที่ประสบความสำเร็จเป็นอย่างมากนั่นเองครับ โดยในรุ่นนี้ก็ได้มีการปรับปรุงทั้งในส่วนของการออกแบบ และฟังก์ชั่นการใช้งานที่เพิ่มขึ้นมาอีกด้วยครับ",
+        "price": 6990,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option5019_21503_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5019_21504_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option5019_21505_800x600.jpg"
+        ]
+    }
+]

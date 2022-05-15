@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Audeze LCD-5",
+        "subtitle":"Audeze",
+        "description":"หูฟังจากทาง Audeze ในรุ่น LCD-5 เป็นหูฟังรุ่นเรือธงอีกรุ่นจากทาง Audeze ครับ โดยในรุ่นนี้จะผ่านการออกแบบใหม่ ทั้งในส่วนของ driver, earpad ไปจนถึงโครงสร้างของหูฟัง จึงทำให้น้ำหนักของหูฟังลดลงถึง 33% เลยทีเดียว",
+        "price": 179000,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option7177_32964_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7177_32960_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7177_32961_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Bose QuietComfort 45",
+        "subtitle":"Bose",
+        "description":"หูฟังไร้สายจากทาง Bose ในรุ่น QuietComfort 45 นั้นเป็นหูฟังไร้สายที่มาพร้อมกับระบบตัดเสียงรบกวน Active noise cancelling พร้อมดีไซน์แบบคลาสสิคและการควบคุมการใช้งานแบบกดปุ่ม",
+        "price": 11900,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6879_31366_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6879_31365_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6879_31369_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Beyerdynamc DT990 Pro 250 ohm",
+        "subtitle":"Beyerdynamc",
+        "description":"These open-back studio headphones are a reliable tool for any sound enthusiast. The wide stereo image and three-dimensional sound reproduction make the beyerdynamic DT 990 PRO headphones a loyal companion for producers.",
+        "price": 7990,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6762_30738_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6762_30736_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6762_30737_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Master & Dynamic MW65",
+        "subtitle":"Master & Dynamic",
+        "description":"Master & Dynamic นั้นได้ทำการปล่อยหูฟัง Headphone Wireless รุ่นใหม่ออกมาวางขายในตลาดซึ่งรุ่นนี้ที่วางขายมีชื่อรุ่นว่า \"MW65\" โดยรุ่นนี้จะมีการปรับปรุงตัวหูฟังในหลายๆจุดครับ ไม่ว่าจะเป็นเรื่องน้ำหนัก การสวมใส่ แม้กระทั่งเสียงเอง ทางแบรนด์ Master & Dynamic ได้มีการปรับแต่งเสียงใหม่เช่นเดียวกันครับ ซึ่งในวันนี้ตัวผมเองก็ได้ทำการหยิบเจ้าหูฟังรุ่นนี้ไปทดสอบ และก็นำมาเขียนรีวิวให้ทุกท่านได้รับทราบข้อมูลกันครับ",
+        "price": 14900,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option4597_19520_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option4597_19521_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option4597_19522_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Skullcandy Crusher Evo",
+        "subtitle":"Skullcandy",
+        "description":"หูฟังไร้สายจาก Skullcandy ในรุ่น Crusher Evo เป็นหูฟังไร้สายที่สามารถปรับแต่งระดับเบสได้ด้วยตัวเองครับ ไม่ว่าจะเป็นแบบหนักแน่น หรือนุ่มนวล ก็สามารถเลือกปรับได้เลย และยังมีฟังก์ชั่นอื่นๆที่น่าสนใจอีกมากมายครับ",
+        "price": 8500,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option7224_33247_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7224_33252_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option7224_33249_800x600.jpg"
+        ]
+    },
+    {
+        "title": "Audio Technica ATH-M50xBT2",
+        "subtitle":"Audio Technica",
+        "description":"The ATH-M50xBT2 headphones deliver the legendary M50x studio sound – with exceptional clarity and deep, accurate bass response – for an exhilarating wireless listening experience",
+        "price": 7690,
+        "images": [
+            "https://www.munkonggadget.com/Images/product/option6513_29289_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6513_29290_800x600.jpg",
+            "https://www.munkonggadget.com/Images/product/option6513_29296_800x600.jpg"
+        ]
+    }
+]
