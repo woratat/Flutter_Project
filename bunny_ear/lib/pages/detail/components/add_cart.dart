@@ -15,16 +15,6 @@ class AddCart extends StatefulWidget {
 
 class _AddCartState extends State<AddCart> {
   final format = new NumberFormat('#,##0.00', 'en_US');
-  int _price = 0;
-  
-  @override
-  void initState() {
-    super.initState();
-
-    setState(() {
-      _price = widget.product.price;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +33,7 @@ class _AddCartState extends State<AddCart> {
                 ),
               ),
               Text(
-                '${format.format(widget.product.price)}',
+                '${format.format(widget.product.price)} THB',
                 style: TextStyle(
                   height: 1.5,
                   fontWeight: FontWeight.bold,
