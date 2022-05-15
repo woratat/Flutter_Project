@@ -8,5 +8,50 @@
             "https://www.munkonggadget.com/Images/product/option1382_15457_800x600.jpg",
             "https://www.munkonggadget.com/Images/product/option1382_4733_800x600.JPG"
         ]
+    },
+    {
+        "title": "Audio Technica ATH-EQ300M BK Black",
+        "subtitle":"Audio Technica",
+        "description":"fit housing portion of the preeminent achieve thinness (sleeves, except ear hanger part) of 8.5mm in 20g lightweight housing + type mortar butterfly. Body mass also reducing the weight about 20g (excluding code), it is not tired even for a long time. Style thorough pursue a comfortable fit in the very mortar-shaped die.",
+        "price": 6244,
+        "images": [
+            "https://m.media-amazon.com/images/I/71b805B7H5L._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51ZSJs0e8NL._AC_SY879_.jpg"
+        ]
+    },
+    {
+        "title": "Panasonic clip headphone silver RP-HZ47-S",
+        "subtitle":"Panasonic",
+        "description":"Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.",
+        "price": 520,
+        "images": [
+            "https://m.media-amazon.com/images/I/6168ksNHb7L._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51hxJr9WtmL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/711UVTlQTpL._AC_SY879_.jpg",
+            "https://m.media-amazon.com/images/I/61PG4yN-OAL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51VzgXWsNUL._AC_SX679_.jpg"
+        ]
+    },
+    {
+        "title": "NewSilkRoad Sports Ear Hook Padded Stereo Over The Ear Headphones Headset with Braided Cable Mic Control for Devices with a 3.5mm Input,Retail Package(Red Black)",
+        "subtitle":"Panasonic",
+        "description":"Earphone with hi-fi stereo sound and calling headset Padded Ear Headset With Microphone Control to Answer and End Calls High-quality built-in microphone. Easy to use, support plug and play Suitable for all 3.5 mm interface MP3, MP4, iPhone, smart phone and notebook computer etc 4feet Braided Cable",
+        "price": 1387,
+        "images": [
+            "https://m.media-amazon.com/images/I/61ESdVv7AfL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/61Q-0-fk4oL._AC_SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51k7HKvfGJL._AC_SX679_.jpg"
+        ]
+    },
+    {
+        "title": "BT221i Bluetooth®",
+        "subtitle":"KOSS",
+        "description":"The Koss BT221i Wireless Bluetooth® On-Ear Clip Headphones feature state of the art Bluetooth® hardware and software. Listeners can stay connected with up to 6+ hours of battery life, in-line microphone and remote for taking calls and controlling music.",
+        "price": 867,
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0525/9608/0813/products/Koss-BT221i-Wireless-Bluetooth-Ear-Clips_4_540x.jpg?v=1612456826",
+            "https://cdn.shopify.com/s/files/1/0525/9608/0813/products/Koss-BT221i-Wireless-Bluetooth-Ear-Clips_2_540x.jpg?v=1612456849"
+        ]
     }
+
 ]

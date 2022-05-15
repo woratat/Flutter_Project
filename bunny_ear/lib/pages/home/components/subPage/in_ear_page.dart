@@ -1,18 +1,17 @@
 import 'package:bunny_ear/constant.dart';
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
-import 'package:bunny_ear/pages/home/home.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-Scaffold popular_page(BuildContext context) {
+Scaffold InEarPage(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
         backgroundColor: primaryColor,
-        title:Text("Popular"),
+        title:Text("In Ear"),
         elevation: 0,
         leading: IconButton(
           onPressed: () {
@@ -26,7 +25,7 @@ Scaffold popular_page(BuildContext context) {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4),
+            padding: const EdgeInsets.symmetric(vertical:4),
           ),
           FutureBuilder(
             future: ReadJsonData(),
@@ -88,7 +87,10 @@ Scaffold popular_page(BuildContext context) {
                                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15)),
                                     color :Colors.white),
                                   ),
-                                  Center(child: Text(items[index].title))
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Center(child: Text(items[index].title, overflow: TextOverflow.ellipsis),),
+                                  )
                                 ],
                               ),
                             )
@@ -106,12 +108,12 @@ Scaffold popular_page(BuildContext context) {
         ],
       ),
     );
-  }
+}
 
 
   Future<List<Product>> ReadJsonData() async {
     final jsondata =
-        await rootBundle.rootBundle.loadString('assets/json/popularProduct.json');
+        await rootBundle.rootBundle.loadString('assets/json/inEar.json');
     final list = json.decode(jsondata) as List<dynamic>;
     return list.map((e) => Product.fromJson(e)).toList();
   }
