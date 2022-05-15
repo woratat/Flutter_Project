@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
-import 'package:bunny_ear/pages/home/components/product_card.dart';
+import 'package:bunny_ear/pages/home/components/product_card2.dart';
 import 'package:bunny_ear/pages/home/components/section_title.dart';
 import 'package:bunny_ear/pages/home/components/see_all.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
 class AllProducts extends StatefulWidget {
-  const AllProducts({ Key? key }) : super(key: key);
+  const AllProducts({Key? key}) : super(key: key);
 
   @override
   State<AllProducts> createState() => _AllProductsState();
@@ -18,74 +18,65 @@ class AllProducts extends StatefulWidget {
 class _AllProductsState extends State<AllProducts> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      child: FutureBuilder(
-        future: ReadJsonData(),
-        builder: (context, data) {
-          if (data.hasError) {
-            return Center(child: Text("${data.error}"));
-          } else if (data.hasData) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: SectionTitle(
+            title: "All Products",
+            pressSeeAll: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SeeAllPage(title: "All Products"),
+                  ));
+            },
+          ),
+        ),
+        FutureBuilder(
+            future: ReadJsonData(),
+            builder: (context, data) {
+        return GridView.count(
+          physics: NeverScrollableScrollPhysics(),
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          crossAxisCount: 2,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
+          padding: const EdgeInsets.all(0.0),
+          children: List.generate(10, (index) {
             var items = data.data as List<Product>;
-            return ListView.builder(
-                itemCount: items == null ? 0 : 1,
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        child: SectionTitle(
-                          title: "All Products",
-                          pressSeeAll: () {
-                             Navigator.push(
+            return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                DetailPage(product: items[index]),
+                          ));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: ProductCard2(
+                        title: items[index].title,
+                        image: items[index].images[0],
+                        price: items[index].price,
+                        press: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                  SeeAllPage(title: "All Products"),
-                              )
-                            );
-                          },
-                        ),
+                                    DetailPage(product: items[index]),
+                              ));
+                        },
                       ),
-                      SingleChildScrollView(
-                        physics: const BouncingScrollPhysics(
-                            parent: AlwaysScrollableScrollPhysics()),
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: List.generate(
-                            items.length,
-                            (index) => Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: ProductCard(
-                                title: items[index].title,
-                                image: items[index].images[0],
-                                price: items[index].price,
-                                press: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          DetailPage(product: items[index]),
-                                    )
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
+                    ),
                   );
-                });
-          } else {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        },
-      ),
+          }),
+        );
+        })
+      ],
     );
-
   }
 }
 

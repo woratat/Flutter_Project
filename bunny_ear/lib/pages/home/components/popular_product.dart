@@ -18,72 +18,72 @@ class PopularProducts extends StatefulWidget {
 class _PopularProductsState extends State<PopularProducts> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 300,
-      child: FutureBuilder(
-        future: ReadJsonData(),
-        builder: (context, data) {
-          if (data.hasError) {
-            return Center(child: Text("${data.error}"));
-          } else if (data.hasData) {
-            var items = data.data as List<Product>;
-            return ListView.builder(
-                itemCount: items == null ? 0 : 1,
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        child: SectionTitle(
-                          title: "Popular",
-                          pressSeeAll: () {
-                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                  SeeAllPage(title: "Popular"),
-                              )
-                            );
-                          },
-                        ),
-                      ),
-                      SingleChildScrollView(
-                        physics: const BouncingScrollPhysics(
-                            parent: AlwaysScrollableScrollPhysics()),
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: List.generate(
-                            items.length,
-                            (index) => Padding(
-                              padding: const EdgeInsets.only(right: 16),
-                              child: ProductCard(
-                                title: items[index].title,
-                                image: items[index].images[0],
-                                price: items[index].price,
-                                press: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          DetailPage(product: items[index]),
-                                    )
-                                  );
-                                },
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: SectionTitle(
+            title: "Popular",
+            pressSeeAll: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SeeAllPage(title: "Popular"),
+                  ));
+            },
+          ),
+        ),
+        Container(
+          height: 200,
+          child: FutureBuilder(
+            future: ReadJsonData(),
+            builder: (context, data) {
+              if (data.hasError) {
+                return Center(child: Text("${data.error}"));
+              } else if (data.hasData) {
+                var items = data.data as List<Product>;
+                return ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: items == null ? 0 : 1,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          SingleChildScrollView(
+                            child: Row(
+                              children: List.generate(
+                                items.length,
+                                (index) => Padding(
+                                  padding: const EdgeInsets.only(right: 16),
+                                  child: ProductCard(
+                                    title: items[index].title,
+                                    image: items[index].images[0],
+                                    price: items[index].price,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              DetailPage(product: items[index]),
+                                        )
+                                      );
+                                    },
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-                      )
-                    ],
-                  );
-                });
-          } else {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        },
-      ),
+                          )
+                        ],
+                      );
+                    });
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            },
+          ),
+        ),
+      ],
     );
 
   }

@@ -1,6 +1,7 @@
 import 'package:bunny_ear/constant.dart';
 import 'package:bunny_ear/models/Product.dart';
 import 'package:bunny_ear/pages/detail/detail.dart';
+import 'package:bunny_ear/pages/home/components/product_card2.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'dart:convert';
 
@@ -50,53 +51,21 @@ Scaffold InEarPage(BuildContext context) {
                         )
                       );
                     },
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
-                            spreadRadius: 3,
-                            blurRadius: 5
-                          )
-                        ],
-                        image: DecorationImage(
-                          image: NetworkImage(
-                          items[index].images[0]
-                          ),
-                          fit: BoxFit.cover
-                        )
+                    child: Padding(
+                      padding: const EdgeInsets.all(0),
+                      child: ProductCard2(
+                        title: items[index].title,
+                        image: items[index].images[0],
+                        price: items[index].price,
+                        press: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    DetailPage(product: items[index]),
+                              ));
+                        },
                       ),
-                      child: Center(
-                        child:Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(8,0,8,0),
-                              child: Container(
-                                color: Color(0xFFEBEBEBE),
-                                height: 1,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 35,
-                              child: Stack(
-                                children: [
-                                  Container(decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15)),
-                                    color :Colors.white),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Center(child: Text(items[index].title, overflow: TextOverflow.ellipsis),),
-                                  )
-                                ],
-                              ),
-                            )
-                          ]
-                        ) ,
-                      )
                     ),
                   );
                 }
