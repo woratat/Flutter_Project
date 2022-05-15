@@ -5,6 +5,7 @@ import 'package:bunny_ear/pages/home/components/subPage/all_products.dart';
 import 'package:bunny_ear/pages/home/components/subPage/earClips_page.dart';
 import 'package:bunny_ear/pages/home/components/subPage/headphones_page.dart';
 import 'package:bunny_ear/pages/home/components/subPage/true_wireless_page.dart';
+import 'package:bunny_ear/pages/home/components/subPage/in_ear_page.dart';
 import 'package:bunny_ear/pages/home/home.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:bunny_ear/pages/home/components/subPage/new_avrrival_page.dart';
@@ -36,10 +37,12 @@ class _SeeAllPageState extends State<SeeAllPage> {
       return trueWirelessPage(context);
     } else if (widget.title == "All Products") {
       return AllProductsPage(context);
-    } else if (widget.title == "Ear Clips") {
+    } else if (widget.title == "In Ear") {
+      return InEarPage(context);
+    }else if (widget.title == "Ear Clips") {
       return earClipsPage(context);
     } else {
-      return Text("data");
+      return Text("Not Found");
     }
   }
 }
