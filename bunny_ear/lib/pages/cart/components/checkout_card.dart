@@ -70,7 +70,7 @@ class CheckoutCard extends StatelessWidget {
                     text: 'Total:\n',
                     children: <TextSpan>[
                       TextSpan(
-                        text: 'THB ${format.format(39990)}',
+                        text: 'THB ${format.format(39990*6)}',
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
@@ -80,7 +80,7 @@ class CheckoutCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 190,
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -97,12 +97,13 @@ class CheckoutCard extends StatelessWidget {
                         Text(
                           'Check Out',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                         SizedBox(width: 10),
                         Icon(
                           Icons.check_outlined,
+                          size: 18,
                         )
                       ],
                     ),
